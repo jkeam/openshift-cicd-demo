@@ -140,6 +140,9 @@ EOF
 
   oc project $cicd_prj
 
+  # Install missing git-clone task
+  oc apply -f https://raw.githubusercontent.com/tektoncd/catalog/main/task/git-clone/0.9/git-clone.yaml
+
   cat <<-EOF
 
 ############################################################################

@@ -143,6 +143,9 @@ EOF
   # Install missing git-clone task
   oc apply -f https://raw.githubusercontent.com/tektoncd/catalog/main/task/git-clone/0.9/git-clone.yaml
 
+  # Disable creds
+  oc set data configmap/feature-flags disable-creds-init="true" -n openshift-pipelines
+
   cat <<-EOF
 
 ############################################################################

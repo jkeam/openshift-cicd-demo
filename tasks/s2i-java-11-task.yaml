@@ -74,6 +74,7 @@ spec:
       workingDir: /env-params
     - command:
         - s2i
+        - --loglevel=DEBUG
         - build
         - $(params.PATH_CONTEXT)
         - 'image-registry.openshift-image-registry.svc:5000/openshift/java:11'
